@@ -1,0 +1,3 @@
+org\mifos\webdriver\pageobjects\DashBoardHomePage.class
+org\mifos\webdriver\pageobjects\LoginPage.class
+org\mifos\webdriver\pageobjects\CreateClientPage.class
