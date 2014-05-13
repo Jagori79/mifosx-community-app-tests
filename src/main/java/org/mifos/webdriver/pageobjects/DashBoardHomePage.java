@@ -15,7 +15,7 @@ public class DashBoardHomePage {
 
     public void load() {
         new WebDriverWait(driver,10).until(
-                ExpectedConditions.textToBePresentInElementLocated(
+                ExpectedConditions.textToBePresentInElement(
                         By.cssSelector("h3.paddedleft > strong.ng-binding"), "MifosX Dash Home")
         );
 
@@ -33,6 +33,21 @@ public class DashBoardHomePage {
         );
 
         createClientLink.click();
+
+
+    }
+    public void loadGroupListingPage() {
+        WebElement clientDropdown = new WebDriverWait(driver,10).until(
+                ExpectedConditions.presenceOfElementLocated(By.cssSelector("a[data-toggle='dropdown']>i.icon-group")));
+        clientDropdown.click();
+
+        driver.findElement(By.cssSelector("a.ng-binding[href='#/groups']")).click();
+
+        WebElement createGroupLink = new WebDriverWait(driver,10).until(
+                ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='#/creategroup'][class ~='btn']"))
+        );
+
+        createGroupLink.click();
 
 
     }
