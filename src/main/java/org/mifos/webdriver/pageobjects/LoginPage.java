@@ -16,7 +16,8 @@ public class LoginPage {
 
     public void get() {
 
-        driver.navigate().to( baseUrl + "/?baseApiUrl=https://demo.openmf.org#/" );
+//        driver.navigate().to( baseUrl + "/?baseApiUrl=https://demo.openmf.org#/" );
+        driver.navigate().to( "https://demo.openmf.org/beta/#/" );
         new WebDriverWait(driver,10).until(ExpectedConditions.titleIs("Mifos X Client"));
     }
 

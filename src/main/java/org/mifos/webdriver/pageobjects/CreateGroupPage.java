@@ -30,8 +30,7 @@ public class CreateGroupPage {
 
         WebElement officeSelect = driver.findElement(By.cssSelector("select#officeId"));
         Select officeIdOption = new Select(officeSelect);
-//        officeIdOption.selectByValue(officeId);
-        officeIdOption.selectByVisibleText("Home Office");
+        officeIdOption.selectByValue(officeId);
 
         WebElement name = driver.findElement(By.cssSelector("input#name"));
         name.sendKeys(groupName);

@@ -19,7 +19,7 @@ public class CreateClientPage {
     public void waitUntilLoaded() {
 
         new WebDriverWait(driver,10).until(
-                ExpectedConditions.textToBePresentInElementLocated(
+                ExpectedConditions.textToBePresentInElement(
                         By.cssSelector("select#officeId > option[selected='selected']"),"Head Office"));
     }
 
